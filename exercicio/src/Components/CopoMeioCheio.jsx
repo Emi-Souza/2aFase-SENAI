@@ -28,4 +28,4 @@ function CopoMeioCheio() {
     )
   }
   
-  export default CopoMeioCheio
+  export default CopoMeioCheio  
