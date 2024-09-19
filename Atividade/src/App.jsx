@@ -1,33 +1,33 @@
-import { useState } from 'react'
-
-import './App.css'
-import DiaSemana from './Atividades/DiaSemana'
+import { useState } from 'react';
+import './App.css';
+import DiaSemana from './Atividades/DiaSemana';
 
 function App() {
-  const [semana, setDiaSemana] = useState()
-  const [semana, setDiaSemana] = useState(true)
+  const [semana, setSemana] = useState('');
 
-  function setDiaSemana(){
-    if(semana == 7){
-      setDiaSemana(true)
+  const verificarDiaSemana = () => {
+    if (semana === '7') {
+      alert('É um dia da semana!');
+    } else if (semana > '7') {
+      alert('Valor inválido! Deve ser entre 1 e 7.');
+    } else if (semana < '1') {
+      alert('Valor inválido! Deve ser entre 1 e 7.');
     }
-    else if(semana > 7){
-      setDiaSemana(false)
-  }
-  }
+  };
+
   return (
     <>
-     <h1>Atividade</h1>
-
-     <input type="text" 
-     value={semana} 
-     onChange={ (event) => {setDiaSemana(event.target.value)} }
-     />
-     <button onClick={ () => {setDiaSemana} }>Semana</button>
+      <h1>Atividade</h1>
+      <input
+        type="text"
+        value={semana}
+        onChange={(event) => setSemana(event.target.value)}
+      />
+      <button onClick={verificarDiaSemana}>Verificar Semana</button>
       {semana && <DiaSemana />}
-
     </>
-  )
+  );
 }
 
-export default App
+export default App;
+

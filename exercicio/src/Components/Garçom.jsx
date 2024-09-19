@@ -1,8 +1,11 @@
 import {useState} from 'react'
 import './Garçom.css'
+import Relatorio from './Relatorio'
 
 function Garçom() {
-    const [resultado, setResultado] = useState()
+    const [resultado, setSalario] = useState()
+    const [stateRelatorio, setStateRelatorio] = useState() 
+
     function processarValor(){
         let salarioUsuario = Number(prompt("Digite o valor do salário: "))
         let valorEmprestimo = Number(prompt("Digite o valor do emprestimo: "))
@@ -12,18 +15,38 @@ function Garçom() {
         let valorLimitePrestacao = salarioUsuario * 0.30
 
         if(valorPrestacao <= valorLimitePrestacao){
-            setResultado('O empréstimo pode ser feito! ')
+          setSalario('O empréstimo pode ser feito!')
+
+          let infosRelatorio = {
+            situacao: "aprovado",
+            maxPrestacao: valorPrestacao,
+            prestacao: valorPrestacao,
+            emprestimo: valorEmprestimo,
+            prestacoes: numeroPrestacoes
         }
+        setStateRelatorio(infosRelatorio)
+      }
         else{
-            setResultado('O empréstimo não pode ser efetuado')
+          setSalario('O empréstimo não pode ser feito')
+
+          let infosRelatorio = {
+            situacao: "reprovado",
+            maxPrestacao: valorPrestacao,
+            prestacao: valorPrestacao,
+            emprestimo: valorEmprestimo,
+            prestacoes: numeroPrestacoes
         }
-        setResultado(inform)
+        setStateRelatorio(infosRelatorio)
+        }
+        setSalario(inform)
     }
     
   return (
     <div className='Garçom-conteiner'>
-      <h2>Linha de Crédito para os funcionários.</h2>
-      <button onClick={processarValor}>Processar</button>
+      <h2>Exercício para infomar se o empréstimo pode ser concedido</h2>
+      <button onClick={processarValor} className= 'processarValor'>Analiza empréstimo</button>
+      {stateRelatorio && 
+      <Relatorio infos={ stateRelatorio} />}
       {resultado}
     </div>
   )
