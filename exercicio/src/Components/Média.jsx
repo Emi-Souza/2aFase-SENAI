@@ -12,8 +12,8 @@ function Média() {
     return (
       <div className="Média-conteiner">
          <h2>Exercício para caulcular média de 2 números</h2>
-         <button onClick={calcularMédia}>Calcular</button>
-         <div>
+         <button onClick={calcularMédia} className= "calcular">Calcular</button>
+         <div className="media">
         Média: {resultado}
         </div>
       </div>

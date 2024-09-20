@@ -11,4 +11,4 @@ function Relatorio(props) {
     </div>
   )
 }
-export default Relatirio
+export default Relatorio

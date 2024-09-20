@@ -22,7 +22,7 @@ function CopoMeioCheio() {
     return (
       <div className="CopoMeioCheio-conteiner">
         <h2>Copo meio cheio</h2>
-        <button onClick={ProcessarNumero}>Processar</button>
+        <button onClick={ProcessarNumero} className= 'numero'>Processar</button>
         {resultado}
       </div>
     )

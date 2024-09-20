@@ -1,7 +1,17 @@
 .Média-conteiner{
+    background-color: rgb(171, 119, 253);
     border: 1px dotted black;
     padding: 20px;
     border-radius: 10px;
     margin: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.calcular{
+    background-color: rgb(149, 96, 235);
+}
+h2{
+    color: rgb(0, 0, 0);
+}
+.media{
+    color: rgb(0, 0, 0);
 }

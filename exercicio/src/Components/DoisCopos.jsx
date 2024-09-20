@@ -18,7 +18,7 @@ function DoisCopos() {
   return (
     <div className="DoisCopos-conteiner">
         <h2>Dois copo meio cheios</h2>
-        <button onClick={ProcessarNumero}>Processar</button>
+        <button onClick={ProcessarNumero} className= 'Copo'>Processar</button>
         {resultado}
       </div>
   )
