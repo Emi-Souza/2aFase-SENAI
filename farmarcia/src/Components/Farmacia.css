@@ -1,0 +1,54 @@
+.textos{
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-5);
+    padding: 30px;
+    width: 540px;
+    margin: 7%;
+    width: fit-content;
+}
+
+
+.texto h1{
+    color: var(--cor-1);
+    text-align: center;
+}
+
+.texto h2{
+    color: var(--cor-4);
+    text-align: center;
+}
+
+.texto p{
+    color: var(--cor-4);
+    text-align: center;
+}
+
+.corpo{
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.teste-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.teste-container img{
+    transform: scale(1.11);
+}
+
+.img-cartoes{
+    border-radius: 8px;
+    margin-left: 50px;
+}
+
+.img-camisetas{
+    margin-top: 30px;
+    border-radius: 8px;
+    margin-right: 50px;
+}

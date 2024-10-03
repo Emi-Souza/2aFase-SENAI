@@ -1,16 +1,20 @@
 import React from 'react'
 import './Navbar.css'
+import Logo from './Logo'
 
 function Navbar() {
   return (
     <div className='navbar-container'>
-       <div class="logo">Farmárcia</div>
+      <div className='logo'>
+      <Logo/>
+      </div>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Contato</a></li>
+            <button className='button'>Home</button>
+            <button className='button'>Sobre</button>
+            <button className='button'>Serviços</button>
+            <button className='button'>Contato</button>
         </ul>
+        
     </div>
   )
 }
